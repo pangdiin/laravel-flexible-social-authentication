@@ -3,12 +3,12 @@
 namespace App\Listeners\Social;
 
 use Mail;
-use App\Mail\Social\GitHubAccountLinked;
-use App\Events\Social\GitHubAccountWasLinked;
+use App\Mail\Social\FacebookAccountLinked;
+use App\Events\Social\FacebookAccountWasLinked;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class SendGitHubLinkedEmail
+class SendFacebookLinkedEmail
 {
     /**
      * Create the event listener.
@@ -26,8 +26,8 @@ class SendGitHubLinkedEmail
      * @param  GitHubAccountWasLinked  $event
      * @return void
      */
-    public function handle(GitHubAccountWasLinked $event)
+    public function handle(FacebookAccountWasLinked $event)
     {
-        Mail::to($event->user)->send(new GitHubAccountLinked($event->user));
+        Mail::to($event->user)->send(new FacebookAccountLinked($event->user));
     }
 }

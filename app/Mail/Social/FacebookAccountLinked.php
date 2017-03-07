@@ -8,7 +8,7 @@ use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class GitHubAccountLinked extends Mailable
+class FacebookAccountLinked extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -30,8 +30,8 @@ class GitHubAccountLinked extends Mailable
      */
     public function build()
     {
-        return $this->subject('Github account linked')->view('email.social.github')->with([
-            'user'  => $this->user
+        return $this->subject('Facebook account linked')->view('email.social.facebook')->with([
+            'user'  =>  $this->user
         ]);
     }
 }

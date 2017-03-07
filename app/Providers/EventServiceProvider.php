@@ -16,6 +16,9 @@ class EventServiceProvider extends ServiceProvider
         'App\Events\Social\GitHubAccountWasLinked' => [
             'App\Listeners\Social\SendGitHubLinkedEmail',
         ],
+        'App\Events\Social\FacebookAccountWasLinked' => [
+            'App\Listeners\Social\SendFacebookLinkedEmail',
+        ],
     ];
 
     /**
