@@ -10,6 +10,11 @@ use App\Http\Controllers\Controller;
 
 class SocialLoginController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware(['social', 'guest']);
+    }
+
     public function redirect($service, Request $request)
     {
     	return Socialite::driver($service)->redirect();
