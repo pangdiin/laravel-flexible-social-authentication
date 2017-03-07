@@ -7,6 +7,10 @@ return [
 		'github'	=>	[
 			'name'	=>	'GitHub',
 		],
+
+		'twitter'	=>	[
+			'name'	=>	'Twitter',
+		],
 		
 	]
 ];
