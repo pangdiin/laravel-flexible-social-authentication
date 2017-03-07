@@ -11,6 +11,10 @@ return [
 		'twitter'	=>	[
 			'name'	=>	'Twitter',
 		],
+
+		'facebook'	=>	[
+			'name'	=>	'Facebook',
+		],
 		
 	]
 ];
